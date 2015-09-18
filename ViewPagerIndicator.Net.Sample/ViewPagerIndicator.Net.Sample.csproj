@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A160AEAC-2EFC-4D95-8C52-ACDC0386C75B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ViewPagerIndicator.Net.Sample</RootNamespace>
+    <AssemblyName>ViewPagerIndicator.Net.Sample</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseSampleActivity.cs" />
+    <Compile Include="ListSamples.cs" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\custom_tab_indicator.xml" />
+    <AndroidResource Include="Resources\drawable\perm_group_calendar.xml" />
+    <AndroidResource Include="Resources\drawable\perm_group_camera.xml" />
+    <AndroidResource Include="Resources\drawable\perm_group_device_alarms.xml" />
+    <AndroidResource Include="Resources\drawable\perm_group_location.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_divider.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_selected.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_selected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\custom_tab_indicator_unselected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_calendar_normal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_calendar_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_camera_normal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_camera_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_device_alarms_normal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_device_alarms_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_location_normal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\perm_group_location_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_divider.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_selected.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_selected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_selected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_unselected.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_unselected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\custom_tab_indicator_unselected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_calendar_normal.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_calendar_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_camera_normal.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_camera_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_device_alarms_normal.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_device_alarms_selected.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_location_normal.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\perm_group_location_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_divider.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_selected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_unselected.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_unselected_focused.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\custom_tab_indicator_unselected_pressed.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_calendar_normal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_calendar_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_camera_normal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_camera_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_device_alarms_normal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_device_alarms_selected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_location_normal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\perm_group_location_selected.png" />
+    <AndroidResource Include="Resources\layout\simple_circles.axml" />
+    <AndroidResource Include="Resources\layout\simple_circles_vertical.axml" />
+    <AndroidResource Include="Resources\layout\simple_icons.axml" />
+    <AndroidResource Include="Resources\layout\simple_lines.axml" />
+    <AndroidResource Include="Resources\layout\simple_tabs.xml" />
+    <AndroidResource Include="Resources\layout\simple_titles.xml" />
+    <AndroidResource Include="Resources\layout\simple_titles_bottom.xml" />
+    <AndroidResource Include="Resources\layout\simple_underlines.xml" />
+    <AndroidResource Include="Resources\layout\themed_circles.xml" />
+    <AndroidResource Include="Resources\layout\themed_lines.xml" />
+    <AndroidResource Include="Resources\layout\themed_titles.xml" />
+    <AndroidResource Include="Resources\layout\themed_underlines.xml" />
+    <AndroidResource Include="Resources\menu\menu.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <Compile Include="SampleCirclesDefault.cs" />
+    <Compile Include="SampleCirclesInitialPage.cs" />
+    <Compile Include="SampleCirclesSnap.cs" />
+    <Compile Include="SampleCirclesStyledLayout.cs" />
+    <Compile Include="SampleCirclesStyledMethods.cs" />
+    <Compile Include="SampleCirclesStyledTheme.cs" />
+    <Compile Include="SampleCirclesWithListener.cs" />
+    <Compile Include="SampleIconsDefault.cs" />
+    <Compile Include="SampleLinesDefault.cs" />
+    <Compile Include="SampleLinesStyledLayout.cs" />
+    <Compile Include="SampleLinesStyledMethods.cs" />
+    <Compile Include="SampleLinesStyledTheme.cs" />
+    <Compile Include="SampleTabsDefault.cs" />
+    <Compile Include="SampleTabsStyled.cs" />
+    <Compile Include="SampleTabsWithIcons.cs" />
+    <Compile Include="SampleTitlesBottom.cs" />
+    <Compile Include="SampleTitlesCenterClickListener.cs" />
+    <Compile Include="SampleTitlesDefault.cs" />
+    <Compile Include="SampleTitlesInitialPage.cs" />
+    <Compile Include="SampleTitlesStyledLayout.cs" />
+    <Compile Include="SampleTitlesStyledMethods.cs" />
+    <Compile Include="SampleTitlesStyledTheme.cs" />
+    <Compile Include="SampleTitlesTriangle.cs" />
+    <Compile Include="SampleTitlesWithListener.cs" />
+    <Compile Include="SampleUnderlinesDefault.cs" />
+    <Compile Include="SampleUnderlinesNoFade.cs" />
+    <Compile Include="SampleUnderlinesStyledLayout.cs" />
+    <Compile Include="SampleUnderlinesStyledMethods.cs" />
+    <Compile Include="SampleUnderlinesStyledTheme.cs" />
+    <Compile Include="TestFragment.cs" />
+    <Compile Include="TestFragmentAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViewPagerIndicator.Net\ViewPagerIndicator.Net.csproj">
+      <Project>{460A6AFF-5169-4511-8474-C8B36A10280A}</Project>
+      <Name>ViewPagerIndicator.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
