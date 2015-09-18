@@ -22,7 +22,7 @@ using R = ViewPagerIndicator.Net.Sample.Resource;
 
 namespace ViewPagerIndicator.Net.Sample
 {
-    [Activity(Label = "SampleTabsDefault.Net.Sample")]
+    [Activity(Label = "SampleTabsDefault")]
     [IntentFilter(new[] { Intent.ActionMain }, Categories = new string[] { "com.jakewharton.android.viewpagerindicator.sample.SAMPLE" })]
 
     public class SampleTabsDefault : FragmentActivity

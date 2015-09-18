@@ -51,7 +51,7 @@ namespace Com.ViewPagerIndicator
         /**
          * Interface for a callback when the selected tab has been reselected.
          */
-        public interface OnTabReselectedListener
+        public interface IOnTabReselectedListener
         {
             /**
              * Callback when the selected tab has been reselected.
@@ -106,7 +106,7 @@ namespace Com.ViewPagerIndicator
         private int mMaxTabWidth;
         private int mSelectedTabIndex;
 
-        private OnTabReselectedListener mTabReselectedListener;
+        private IOnTabReselectedListener mTabReselectedListener;
 
         public TabPageIndicator(Context context)
             : this(context, null)
@@ -124,7 +124,7 @@ namespace Com.ViewPagerIndicator
             AddView(mTabLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.MatchParent));
         }
 
-        public void setOnTabReselectedListener(OnTabReselectedListener listener)
+        public void setOnTabReselectedListener(IOnTabReselectedListener listener)
         {
             mTabReselectedListener = listener;
         }
@@ -227,7 +227,7 @@ namespace Com.ViewPagerIndicator
 
         private void addTab(int index, string text, int iconResId)
         {
-            TabView tabView = new TabView(this.Context, this.mMaxTabWidth);
+            TabView tabView = new TabView(this);
 
             tabView.mIndex = index;
             tabView.Focusable = true;
@@ -362,12 +362,13 @@ namespace Com.ViewPagerIndicator
 
         private class TabView : TextView
         {
+            private TabPageIndicator mInst;
             public int mIndex;
-            private int mMaxTabWidth;
-            public TabView(Context context, int maxtabwidth)
-                : base(context, null, R.Attribute.vpiTabPageIndicatorStyle)
+             
+            public TabView(TabPageIndicator inst)
+                : base(inst.Context, null, R.Attribute.vpiTabPageIndicatorStyle)
             {
-                mMaxTabWidth = maxtabwidth;
+                mInst = inst;
             }
 
             //@Override
@@ -376,9 +377,9 @@ namespace Com.ViewPagerIndicator
                 base.OnMeasure(widthMeasureSpec, heightMeasureSpec);
 
                 // Re-measure if we went beyond our maximum size.
-                if (mMaxTabWidth > 0 && MeasuredWidth > mMaxTabWidth)
+                if (mInst.mMaxTabWidth > 0 && MeasuredWidth > mInst.mMaxTabWidth)
                 {
-                    base.OnMeasure(MeasureSpec.MakeMeasureSpec(mMaxTabWidth, MeasureSpecMode.Exactly),
+                    base.OnMeasure(MeasureSpec.MakeMeasureSpec(mInst.mMaxTabWidth, MeasureSpecMode.Exactly),
                             heightMeasureSpec);
                 }
             }
